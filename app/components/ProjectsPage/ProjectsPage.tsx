@@ -6,7 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Button, Card } from "antd";
 import Link from "next/link";
 
-type Task = {
+export type Task = {
   name: string;
   assignedTo: string[];
   status: string;
