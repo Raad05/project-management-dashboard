@@ -3,13 +3,30 @@
 import { Project, Task } from "@/app/components/ProjectsPage/ProjectsPage";
 import { useProjectStore } from "@/app/store/projectStore";
 import { UserAddOutlined } from "@ant-design/icons";
-import { Layout, theme } from "antd";
+import { Button, Layout, Modal, theme } from "antd";
 import { Divider, List, Typography } from "antd";
-import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
+import { EditOutlined } from "@ant-design/icons";
+import { useState } from "react";
 
 const { Content } = Layout;
 
 const ProjectDetails = ({ params }: { params: { projectId: string } }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [newTask, setNewTask] = useState("");
+  const [newMember, setNewMember] = useState("");
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
@@ -59,7 +76,10 @@ const ProjectDetails = ({ params }: { params: { projectId: string } }) => {
           <div className="border border-gray-100 mx-3 rounded w-4/5 p-2 text-lg">
             <div className="flex justify-between">
               <p className="font-bold">{projectById.name}</p>
-              <EditOutlined className="mx-2 text-2xl"></EditOutlined>
+              <EditOutlined
+                onClick={showModal}
+                className="mx-2 text-2xl"
+              ></EditOutlined>
             </div>
             <p className="my-5">{projectById.description}</p>
           </div>
@@ -99,6 +119,35 @@ const ProjectDetails = ({ params }: { params: { projectId: string } }) => {
           </div>
         </div>
       </Content>
+      <Modal
+        title="Edit Project"
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
+        <div className="flex justify-around items-center my-5">
+          <p className="text-lg">Add Task</p>
+          <input
+            className="border border-gray-300 rounded"
+            onChange={(e) => {
+              setNewTask(e.target.value);
+            }}
+            type="text"
+          />
+          <Button onClick={() => console.log(newTask)}>Add</Button>
+        </div>
+        <div className="flex justify-around items-center my-5">
+          <p className="text-lg">Assign New Member</p>
+          <input
+            className="border border-gray-300 rounded"
+            onChange={(e) => {
+              setNewMember(e.target.value);
+            }}
+            type="text"
+          />
+          <Button onClick={() => console.log(newMember)}>Assign</Button>
+        </div>
+      </Modal>
     </Layout>
   );
 };
