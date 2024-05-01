@@ -1,0 +1,157 @@
+[
+  {
+    "name": "Website Redesign",
+    "description": "Revamp the company's website for better user experience and modern look.",
+    "tasks": [
+      {
+        "name": "Gather requirements and user feedback",
+        "assignedTo": ["John", "Alice"],
+        "status": "In Progress",
+        "dueDate": "2024-06-10"
+      },
+      {
+        "name": "Design new website layout",
+        "assignedTo": ["Bob", "Emily"],
+        "status": "Not Started",
+        "dueDate": "2024-07-01"
+      },
+      {
+        "name": "Develop frontend",
+        "assignedTo": ["John", "Emily"],
+        "status": "Not Started",
+        "dueDate": "2024-07-15"
+      },
+      {
+        "name": "Integrate backend functionality",
+        "assignedTo": ["Bob", "Alice"],
+        "status": "Not Started",
+        "dueDate": "2024-07-30"
+      }
+    ],
+    "members": ["John", "Alice", "Bob", "Emily"]
+  },
+  {
+    "name": "Product Launch - Mobile App",
+    "description": "Launch a new mobile app for iOS and Android platforms.",
+    "tasks": [
+      {
+        "name": "App concept and wireframing",
+        "assignedTo": ["Alice", "Emily"],
+        "status": "Completed",
+        "dueDate": "2024-05-15"
+      },
+      {
+        "name": "iOS app development",
+        "assignedTo": ["John", "Bob"],
+        "status": "In Progress",
+        "dueDate": "2024-06-30"
+      },
+      {
+        "name": "Android app development",
+        "assignedTo": ["Bob", "Alice"],
+        "status": "Not Started",
+        "dueDate": "2024-07-15"
+      },
+      {
+        "name": "Beta testing and bug fixes",
+        "assignedTo": ["John", "Emily"],
+        "status": "Not Started",
+        "dueDate": "2024-07-31"
+      }
+    ],
+    "members": ["John", "Alice", "Bob", "Emily"]
+  },
+  {
+    "name": "Marketing Campaign - Summer Sale",
+    "description": "Plan and execute a marketing campaign for the summer sale promotion.",
+    "tasks": [
+      {
+        "name": "Marketing strategy development",
+        "assignedTo": ["John", "Bob"],
+        "status": "In Progress",
+        "dueDate": "2024-06-05"
+      },
+      {
+        "name": "Create promotional materials",
+        "assignedTo": ["Alice", "Emily"],
+        "status": "Not Started",
+        "dueDate": "2024-06-20"
+      },
+      {
+        "name": "Email marketing campaign",
+        "assignedTo": ["Alice", "John"],
+        "status": "Not Started",
+        "dueDate": "2024-07-01"
+      },
+      {
+        "name": "Social media advertising",
+        "assignedTo": ["Emily", "Bob"],
+        "status": "Not Started",
+        "dueDate": "2024-07-10"
+      }
+    ],
+    "members": ["John", "Alice", "Bob", "Emily"]
+  },
+  {
+    "name": "Research & Development - AI Integration",
+    "description": "Explore and integrate AI technologies into existing products for enhanced features.",
+    "tasks": [
+      {
+        "name": "Market research on AI trends",
+        "assignedTo": ["Bob", "Alice"],
+        "status": "Completed",
+        "dueDate": "2024-04-30"
+      },
+      {
+        "name": "Prototype AI integration",
+        "assignedTo": ["John", "Emily"],
+        "status": "In Progress",
+        "dueDate": "2024-06-15"
+      },
+      {
+        "name": "Test AI models",
+        "assignedTo": ["Alice", "Bob"],
+        "status": "Not Started",
+        "dueDate": "2024-07-01"
+      },
+      {
+        "name": "Integrate AI into products",
+        "assignedTo": ["John", "Emily"],
+        "status": "Not Started",
+        "dueDate": "2024-07-31"
+      }
+    ],
+    "members": ["John", "Alice", "Bob", "Emily"]
+  },
+  {
+    "name": "Event Planning - Annual Conference",
+    "description": "Organize and manage the annual company conference for employees and clients.",
+    "tasks": [
+      {
+        "name": "Venue selection and booking",
+        "assignedTo": ["Alice", "Bob"],
+        "status": "Completed",
+        "dueDate": "2024-04-20"
+      },
+      {
+        "name": "Event agenda planning",
+        "assignedTo": ["John", "Emily"],
+        "status": "In Progress",
+        "dueDate": "2024-05-15"
+      },
+      {
+        "name": "Invite speakers and guests",
+        "assignedTo": ["Bob", "Alice"],
+        "status": "Not Started",
+        "dueDate": "2024-06-01"
+      },
+      {
+        "name": "Logistics and catering arrangements",
+        "assignedTo": ["Emily", "John"],
+        "status": "Not Started",
+        "dueDate": "2024-06-30"
+      }
+    ],
+    "members": ["John", "Alice", "Bob", "Emily"]
+  }
+]

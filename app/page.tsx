@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import { Button } from "antd";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Dashboard",
+  description: "Project Management Dashboard",
+};
 
 export default function Home() {
   return (
