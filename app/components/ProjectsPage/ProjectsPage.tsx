@@ -1,6 +1,8 @@
 "use client";
 
+import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import { useQuery } from "@tanstack/react-query";
+import { Button, Card } from "antd";
 import { useState } from "react";
 
 type Task = {
@@ -47,8 +49,21 @@ const ProjectsPage = () => {
 
   return (
     <div className="projects-page">
-      {data?.map((project: Project) => console.log(project.name))}
-      <h1>Projects Page</h1>
+      <h1 className="text-center text-3xl font-bold my-10">Projects</h1>
+      <div className="grid grid-cols-3 gap-5">
+        {data?.map((project: Project, idx: number) => (
+          <Card key={idx} title={`${project.name}`} bordered={false}>
+            <p>{project.description}</p>
+            <div className="flex justify-around">
+              <Button className="font-bold">View</Button>
+              <span>
+                <EditOutlined className="mx-2" />
+                <DeleteOutlined className="mx-2" />
+              </span>
+            </div>
+          </Card>
+        ))}
+      </div>
     </div>
   );
 };
