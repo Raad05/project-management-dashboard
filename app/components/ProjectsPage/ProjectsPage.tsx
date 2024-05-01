@@ -3,6 +3,7 @@
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import { useQuery } from "@tanstack/react-query";
 import { Button, Card } from "antd";
+import Link from "next/link";
 import { useState } from "react";
 
 type Task = {
@@ -13,6 +14,7 @@ type Task = {
 };
 
 type Project = {
+  id: string;
   name: string;
   description: string;
   tasks: Task[];
@@ -55,7 +57,9 @@ const ProjectsPage = () => {
           <Card key={idx} title={`${project.name}`} bordered={false}>
             <p>{project.description}</p>
             <div className="flex justify-around">
-              <Button className="font-bold">View</Button>
+              <Link href={`/projects/${project.id}`}>
+                <Button className="font-bold">View</Button>
+              </Link>
               <span>
                 <EditOutlined className="mx-2" />
                 <DeleteOutlined className="mx-2" />
