@@ -22,10 +22,13 @@ export type Project = {
 };
 
 const ProjectsPage = () => {
-  const { projects, setProjects } = useProjectStore((state: any) => ({
-    projects: state.projects,
-    setProjects: state.setProjects,
-  }));
+  const { projects, setProjects, deleteProject } = useProjectStore(
+    (state: any) => ({
+      projects: state.projects,
+      setProjects: state.setProjects,
+      deleteProject: state.deleteProject,
+    })
+  );
 
   const getProjects = async () => {
     try {
@@ -39,7 +42,7 @@ const ProjectsPage = () => {
     }
   };
 
-  const { isPending, isError, data, error } = useQuery({
+  const { isPending, isError, error } = useQuery({
     queryKey: ["projects"],
     queryFn: getProjects,
   });
@@ -58,14 +61,17 @@ const ProjectsPage = () => {
       <div className="grid grid-cols-3 gap-5">
         {projects?.map((project: Project, idx: number) => (
           <Card key={idx} title={`${project.name}`} bordered={false}>
-            <p>{project.description}</p>
-            <div className="flex justify-around">
+            <p className="my-5">{project.description.slice(0, 120)}...</p>
+            <div className="flex justify-between items-center">
               <Link href={`/projects/${project.id}`}>
                 <Button className="font-bold">View</Button>
               </Link>
               <span>
-                <EditOutlined className="mx-2" />
-                <DeleteOutlined className="mx-2" />
+                <EditOutlined className="mx-2 text-lg" />
+                <DeleteOutlined
+                  onClick={() => deleteProject(project.id)}
+                  className="mx-2 text-lg text-red-500"
+                />
               </span>
             </div>
           </Card>

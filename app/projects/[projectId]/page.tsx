@@ -16,6 +16,7 @@ const ProjectDetails = ({ params }: { params: { projectId: string } }) => {
 
   const { projects } = useProjectStore((state: any) => ({
     projects: state.projects,
+    deleteProject: state.deleteProject,
   }));
 
   const projectById = projects.find(
@@ -58,10 +59,7 @@ const ProjectDetails = ({ params }: { params: { projectId: string } }) => {
           <div className="border border-gray-100 mx-3 rounded w-4/5 p-2 text-lg">
             <div className="flex justify-between">
               <p className="font-bold">{projectById.name}</p>
-              <div>
-                <EditOutlined className="mx-2 text-2xl"></EditOutlined>
-                <DeleteOutlined className="mx-2 text-red-500 text-2xl"></DeleteOutlined>
-              </div>
+              <EditOutlined className="mx-2 text-2xl"></EditOutlined>
             </div>
             <p className="my-5">{projectById.description}</p>
           </div>
