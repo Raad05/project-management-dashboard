@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "Website Redesign",
     "description": "Revamp the company's website for better user experience and modern look.",
     "tasks": [
@@ -31,6 +32,7 @@
     "members": ["John", "Alice", "Bob", "Emily"]
   },
   {
+    "id": 2,
     "name": "Product Launch - Mobile App",
     "description": "Launch a new mobile app for iOS and Android platforms.",
     "tasks": [
@@ -62,6 +64,7 @@
     "members": ["John", "Alice", "Bob", "Emily"]
   },
   {
+    "id": 3,
     "name": "Marketing Campaign - Summer Sale",
     "description": "Plan and execute a marketing campaign for the summer sale promotion.",
     "tasks": [
@@ -93,6 +96,7 @@
     "members": ["John", "Alice", "Bob", "Emily"]
   },
   {
+    "id": 4,
     "name": "Research & Development - AI Integration",
     "description": "Explore and integrate AI technologies into existing products for enhanced features.",
     "tasks": [
@@ -124,6 +128,7 @@
     "members": ["John", "Alice", "Bob", "Emily"]
   },
   {
+    "id": 5,
     "name": "Event Planning - Annual Conference",
     "description": "Organize and manage the annual company conference for employees and clients.",
     "tasks": [
