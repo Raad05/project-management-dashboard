@@ -1,5 +1,5 @@
-const ProductDetails = ({ params }: { params: { projectId: string } }) => {
-  return <div>{params.projectId}</div>;
+const ProjectDetails = ({ params }: { params: { projectId: string } }) => {
+  return <div className="product-details">{params.projectId}</div>;
 };
 
-export default ProductDetails;
+export default ProjectDetails;

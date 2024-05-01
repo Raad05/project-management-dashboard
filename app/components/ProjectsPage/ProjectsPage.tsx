@@ -1,10 +1,10 @@
 "use client";
 
+import { useProjectStore } from "@/app/store/projectStore";
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import { useQuery } from "@tanstack/react-query";
 import { Button, Card } from "antd";
 import Link from "next/link";
-import { useState } from "react";
 
 type Task = {
   name: string;
@@ -13,7 +13,7 @@ type Task = {
   dueDate: string;
 };
 
-type Project = {
+export type Project = {
   id: string;
   name: string;
   description: string;
@@ -22,7 +22,10 @@ type Project = {
 };
 
 const ProjectsPage = () => {
-  const [projects, setProjects] = useState([]);
+  const { projects, setProjects } = useProjectStore((state: any) => ({
+    projects: state.projects,
+    setProjects: state.setProjects,
+  }));
 
   const getProjects = async () => {
     try {
@@ -53,7 +56,7 @@ const ProjectsPage = () => {
     <div className="projects-page">
       <h1 className="text-center text-3xl font-bold my-10">Projects</h1>
       <div className="grid grid-cols-3 gap-5">
-        {data?.map((project: Project, idx: number) => (
+        {projects?.map((project: Project, idx: number) => (
           <Card key={idx} title={`${project.name}`} bordered={false}>
             <p>{project.description}</p>
             <div className="flex justify-around">
