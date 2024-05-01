@@ -13,9 +13,10 @@ const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
   if (values.username === "Yamin" && values.password === "123") {
     console.log("Success:", values);
     alert("Login successful!");
+  } else {
+    console.log("Username or password does not match");
+    alert("Username or password does not match");
   }
-  console.log("Username or password does not match");
-  alert("Username or password does not match");
 };
 
 const onFinishFailed: FormProps<FieldType>["onFinishFailed"] = (errorInfo) => {
